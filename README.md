@@ -1,5 +1,19 @@
 
 
+## Chapter ideas (in no particular order) 
+
+* github and version control 
+
+* basic linux commands (draft) 
+
+* conditional statments (done - Jason read over and add to it)
+
+* for loops (done - Jason read over and add to it)
+
+* data visualization 
+
+
+
 * handling messy data 
 
 	- missing data/NAs
