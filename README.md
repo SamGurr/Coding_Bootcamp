@@ -12,6 +12,7 @@
 
 * data visualization 
 
+* data structures 
 
 
 * handling messy data 
