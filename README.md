@@ -1,6 +1,34 @@
 
+## Structure 
+
+link to inspiration: https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/pooling-es.html
+
+* chapters
+
+	- hands-on session 
+
+	- 
+
+
+
+
 
 ## Chapter ideas (in no particular order) 
+
+
+* basic operations and variable types 
+
+	- indexing 
+	
+	- outputting data 
+	
+	- assigning factors 
+
+	- str() - learn your data 
+
+	- importing a dataset 
+
+	- what is a directory - view your directory and set your directory 
 
 * github and version control 
 
@@ -13,6 +41,10 @@
 * data visualization 
 
 * data structures 
+
+
+
+
 
 
 * handling messy data 
