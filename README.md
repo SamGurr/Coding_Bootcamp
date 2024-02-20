@@ -1,6 +1,17 @@
 
 
+* handling messy data 
 
+	- missing data/NAs
+
+	- staircase structures
+	
+	- data formats *csv, tsv, excel, tab)
+
+	- consolidate individudual files to a master (merging)
+
+
+ 
 
 
 Best practices
