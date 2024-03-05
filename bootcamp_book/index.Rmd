@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Coding Bootcamp for the starting biologist or cognitive scientist"
+author: "Samuel Gurr, PhD and Jason Griffin, PhD"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,7 +15,22 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# About
+# Getting Started
+
+## Installation of software
+
+### The ecosystem
+
+With `R` and `RStudio` now installed on your computer, lets open `Rstudio`. It may be overwhelming at first, but this Integrated Development Environment (IDE) will provide a useful and practical interface between you and your code. Lets explore the basics of this interface. 
+
+**1. Script Window**
+
+**2. Console**
+
+**3. Environment**
+
+**4. Directory**
+
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 
