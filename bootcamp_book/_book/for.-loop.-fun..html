@@ -406,27 +406,18 @@ here is an example of an R package that streamlines raw syntax and logic for you
 <li><code>if_else(condition, TRUE, FALSE)</code></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="for.-loop.-fun..html#cb38-1" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># load the library</span></span></code></pre></div>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="for.-loop.-fun..html#cb43-1" tabindex="-1"></a><span class="co"># install.packages(&#39;dplyr&#39;) # of you do not have the package above, remove the hashtag and Cnrtl+Enter to run this line tp install</span></span>
-<span id="cb43-2"><a href="for.-loop.-fun..html#cb43-2" tabindex="-1"></a></span>
-<span id="cb43-3"><a href="for.-loop.-fun..html#cb43-3" tabindex="-1"></a>?if_else <span class="co"># review the command page </span></span>
-<span id="cb43-4"><a href="for.-loop.-fun..html#cb43-4" tabindex="-1"></a></span>
-<span id="cb43-5"><a href="for.-loop.-fun..html#cb43-5" tabindex="-1"></a><span class="co"># input the criteria - same as the for loop above</span></span>
-<span id="cb43-6"><a href="for.-loop.-fun..html#cb43-6" tabindex="-1"></a></span>
-<span id="cb43-7"><a href="for.-loop.-fun..html#cb43-7" tabindex="-1"></a>DF_tooth<span class="sc">$</span>len_new2 <span class="ot">&lt;-</span> <span class="fu">if_else</span>(DF_tooth<span class="sc">$</span>supp <span class="sc">==</span> <span class="st">&#39;OJ&#39;</span>, </span>
-<span id="cb43-8"><a href="for.-loop.-fun..html#cb43-8" tabindex="-1"></a>                            (DF_tooth<span class="sc">$</span>len <span class="sc">+</span> DF_tooth<span class="sc">$</span>len<span class="sc">*</span>(<span class="fl">0.1</span>)), <span class="co"># TRUE</span></span>
-<span id="cb43-9"><a href="for.-loop.-fun..html#cb43-9" tabindex="-1"></a>                            (DF_tooth<span class="sc">$</span>len)) <span class="co"># FALSE</span></span>
-<span id="cb43-10"><a href="for.-loop.-fun..html#cb43-10" tabindex="-1"></a></span>
-<span id="cb43-11"><a href="for.-loop.-fun..html#cb43-11" tabindex="-1"></a><span class="fu">View</span>(DF_tooth)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="for.-loop.-fun..html#cb38-1" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># load the library</span></span>
+<span id="cb38-2"><a href="for.-loop.-fun..html#cb38-2" tabindex="-1"></a><span class="co"># install.packages(&#39;dplyr&#39;) # of you do not have the package above, remove the hashtag and Cnrtl+Enter to run this line tp install</span></span>
+<span id="cb38-3"><a href="for.-loop.-fun..html#cb38-3" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="for.-loop.-fun..html#cb38-4" tabindex="-1"></a>?if_else <span class="co"># review the command page </span></span>
+<span id="cb38-5"><a href="for.-loop.-fun..html#cb38-5" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="for.-loop.-fun..html#cb38-6" tabindex="-1"></a><span class="co"># input the criteria - same as the for loop above</span></span>
+<span id="cb38-7"><a href="for.-loop.-fun..html#cb38-7" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="for.-loop.-fun..html#cb38-8" tabindex="-1"></a>DF_tooth<span class="sc">$</span>len_new2 <span class="ot">&lt;-</span> <span class="fu">if_else</span>(DF_tooth<span class="sc">$</span>supp <span class="sc">==</span> <span class="st">&#39;OJ&#39;</span>, </span>
+<span id="cb38-9"><a href="for.-loop.-fun..html#cb38-9" tabindex="-1"></a>                            (DF_tooth<span class="sc">$</span>len <span class="sc">+</span> DF_tooth<span class="sc">$</span>len<span class="sc">*</span>(<span class="fl">0.1</span>)), <span class="co"># TRUE</span></span>
+<span id="cb38-10"><a href="for.-loop.-fun..html#cb38-10" tabindex="-1"></a>                            (DF_tooth<span class="sc">$</span>len)) <span class="co"># FALSE</span></span>
+<span id="cb38-11"><a href="for.-loop.-fun..html#cb38-11" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="for.-loop.-fun..html#cb38-12" tabindex="-1"></a><span class="fu">View</span>(DF_tooth)</span></code></pre></div>
 </div>
 <div id="example-2-plot-loop-flower-power-" class="section level2 hasAnchor" number="8.7">
 <h2><span class="header-section-number">8.7</span> Example #2 (plot loop): <em>Flower power</em><code>{-}</code><a href="for.-loop.-fun..html#example-2-plot-loop-flower-power-" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -439,11 +430,11 @@ here is an example of an R package that streamlines raw syntax and logic for you
 </ul></li>
 <li><p><code>{}</code> - inserted below is an <code>ggplot</code> <code>geom_boxplot</code> for each column with numeric data</p></li>
 </ul>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="for.-loop.-fun..html#cb44-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># load the library</span></span></code></pre></div>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.2.3</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="for.-loop.-fun..html#cb46-1" tabindex="-1"></a><span class="co"># install.packages(&#39;ggplot2&#39;) # of you do not have the package above, remove the hashtag and Cnrtl+Enter to run this line tp install</span></span>
-<span id="cb46-2"><a href="for.-loop.-fun..html#cb46-2" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="for.-loop.-fun..html#cb46-3" tabindex="-1"></a>iris <span class="co"># take a look at the dataset! </span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="for.-loop.-fun..html#cb39-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># load the library</span></span>
+<span id="cb39-2"><a href="for.-loop.-fun..html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="for.-loop.-fun..html#cb39-3" tabindex="-1"></a><span class="co"># install.packages(&#39;ggplot2&#39;) # of you do not have the package above, remove the hashtag and Cnrtl+Enter to run this line tp install</span></span>
+<span id="cb39-4"><a href="for.-loop.-fun..html#cb39-4" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="for.-loop.-fun..html#cb39-5" tabindex="-1"></a>iris <span class="co"># take a look at the dataset! </span></span></code></pre></div>
 <pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 ## 1            5.1         3.5          1.4         0.2     setosa
 ## 2            4.9         3.0          1.4         0.2     setosa
@@ -595,9 +586,9 @@ here is an example of an R package that streamlines raw syntax and logic for you
 ## 148          6.5         3.0          5.2         2.0  virginica
 ## 149          6.2         3.4          5.4         2.3  virginica
 ## 150          5.9         3.0          5.1         1.8  virginica</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="for.-loop.-fun..html#cb48-1" tabindex="-1"></a><span class="fu">dim</span>(iris) <span class="co"># 150 rows and 5 columns </span></span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="for.-loop.-fun..html#cb41-1" tabindex="-1"></a><span class="fu">dim</span>(iris) <span class="co"># 150 rows and 5 columns </span></span></code></pre></div>
 <pre><code>## [1] 150   5</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="for.-loop.-fun..html#cb50-1" tabindex="-1"></a><span class="fu">head</span>(iris) <span class="co"># first four rows are numeric data and last row is categorical &#39;Species&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="for.-loop.-fun..html#cb43-1" tabindex="-1"></a><span class="fu">head</span>(iris) <span class="co"># first four rows are numeric data and last row is categorical &#39;Species&#39;</span></span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -605,24 +596,24 @@ here is an example of an R package that streamlines raw syntax and logic for you
 ## 4          4.6         3.1          1.5         0.2  setosa
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="for.-loop.-fun..html#cb52-1" tabindex="-1"></a><span class="co"># below we loop thorugh each iris numeric column and plot by species </span></span>
-<span id="cb52-2"><a href="for.-loop.-fun..html#cb52-2" tabindex="-1"></a></span>
-<span id="cb52-3"><a href="for.-loop.-fun..html#cb52-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">ncol</span>(iris)<span class="sc">-</span><span class="dv">1</span>)) { <span class="co"># open for loop, for i equal to 1 - 4</span></span>
-<span id="cb52-4"><a href="for.-loop.-fun..html#cb52-4" tabindex="-1"></a>  </span>
-<span id="cb52-5"><a href="for.-loop.-fun..html#cb52-5" tabindex="-1"></a>    loop_measurement_name <span class="ot">&lt;-</span> <span class="fu">colnames</span>(iris[i]) <span class="co"># string to name the plot and y axis</span></span>
-<span id="cb52-6"><a href="for.-loop.-fun..html#cb52-6" tabindex="-1"></a></span>
-<span id="cb52-7"><a href="for.-loop.-fun..html#cb52-7" tabindex="-1"></a>    plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x=</span>Species, <span class="at">y=</span>iris[,i]), <span class="at">fill=</span>Species) <span class="sc">+</span></span>
-<span id="cb52-8"><a href="for.-loop.-fun..html#cb52-8" tabindex="-1"></a>      <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
-<span id="cb52-9"><a href="for.-loop.-fun..html#cb52-9" tabindex="-1"></a>      <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb52-10"><a href="for.-loop.-fun..html#cb52-10" tabindex="-1"></a>      <span class="fu">ylab</span>(loop_measurement_name) <span class="sc">+</span> <span class="co"># name the y axis w</span></span>
-<span id="cb52-11"><a href="for.-loop.-fun..html#cb52-11" tabindex="-1"></a>      <span class="fu">ggtitle</span>(loop_measurement_name) <span class="sc">+</span> <span class="co"># name the plot</span></span>
-<span id="cb52-12"><a href="for.-loop.-fun..html#cb52-12" tabindex="-1"></a>      <span class="fu">theme_classic</span>()</span>
-<span id="cb52-13"><a href="for.-loop.-fun..html#cb52-13" tabindex="-1"></a>    </span>
-<span id="cb52-14"><a href="for.-loop.-fun..html#cb52-14" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
-<span id="cb52-15"><a href="for.-loop.-fun..html#cb52-15" tabindex="-1"></a>    </span>
-<span id="cb52-16"><a href="for.-loop.-fun..html#cb52-16" tabindex="-1"></a>} <span class="co"># close  for loop</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="for.-loop.-fun..html#cb45-1" tabindex="-1"></a><span class="co"># below we loop thorugh each iris numeric column and plot by species </span></span>
+<span id="cb45-2"><a href="for.-loop.-fun..html#cb45-2" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="for.-loop.-fun..html#cb45-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">ncol</span>(iris)<span class="sc">-</span><span class="dv">1</span>)) { <span class="co"># open for loop, for i equal to 1 - 4</span></span>
+<span id="cb45-4"><a href="for.-loop.-fun..html#cb45-4" tabindex="-1"></a>  </span>
+<span id="cb45-5"><a href="for.-loop.-fun..html#cb45-5" tabindex="-1"></a>    loop_measurement_name <span class="ot">&lt;-</span> <span class="fu">colnames</span>(iris[i]) <span class="co"># string to name the plot and y axis</span></span>
+<span id="cb45-6"><a href="for.-loop.-fun..html#cb45-6" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="for.-loop.-fun..html#cb45-7" tabindex="-1"></a>    plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x=</span>Species, <span class="at">y=</span>iris[,i]), <span class="at">fill=</span>Species) <span class="sc">+</span></span>
+<span id="cb45-8"><a href="for.-loop.-fun..html#cb45-8" tabindex="-1"></a>      <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb45-9"><a href="for.-loop.-fun..html#cb45-9" tabindex="-1"></a>      <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb45-10"><a href="for.-loop.-fun..html#cb45-10" tabindex="-1"></a>      <span class="fu">ylab</span>(loop_measurement_name) <span class="sc">+</span> <span class="co"># name the y axis w</span></span>
+<span id="cb45-11"><a href="for.-loop.-fun..html#cb45-11" tabindex="-1"></a>      <span class="fu">ggtitle</span>(loop_measurement_name) <span class="sc">+</span> <span class="co"># name the plot</span></span>
+<span id="cb45-12"><a href="for.-loop.-fun..html#cb45-12" tabindex="-1"></a>      <span class="fu">theme_classic</span>()</span>
+<span id="cb45-13"><a href="for.-loop.-fun..html#cb45-13" tabindex="-1"></a>    </span>
+<span id="cb45-14"><a href="for.-loop.-fun..html#cb45-14" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
+<span id="cb45-15"><a href="for.-loop.-fun..html#cb45-15" tabindex="-1"></a>    </span>
+<span id="cb45-16"><a href="for.-loop.-fun..html#cb45-16" tabindex="-1"></a>} <span class="co"># close  for loop</span></span></code></pre></div>
 <p><img src="_main_files/figure-html/plotting%20flower-1.png" width="672" /><img src="_main_files/figure-html/plotting%20flower-2.png" width="672" /><img src="_main_files/figure-html/plotting%20flower-3.png" width="672" /><img src="_main_files/figure-html/plotting%20flower-4.png" width="672" /></p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="for.-loop.-fun..html#cb53-1" tabindex="-1"></a><span class="co"># clock below to see the four unique boxplots!</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="for.-loop.-fun..html#cb46-1" tabindex="-1"></a><span class="co"># clock below to see the four unique boxplots!</span></span></code></pre></div>
 <ul>
 <li>Note: as opposed to <code>print()</code> we could use the unique identifier ‘loop_measurement_name’ to name and output pdfs or jpegs onto your computer!</li>
 </ul>
@@ -638,35 +629,35 @@ here is an example of an R package that streamlines raw syntax and logic for you
 <li><p>virginica: <code>Audrey_III.Length</code>= Pedal.Length^3.0</p></li>
 </ul>
 <p><strong>Objective</strong>: create a new column <code>Audrey_III.Length</code> based on the relationships with Pedal.Length for each iris species</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="for.-loop.-fun..html#cb54-1" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb54-2"><a href="for.-loop.-fun..html#cb54-2" tabindex="-1"></a><span class="co"># for () { # open for loop</span></span>
-<span id="cb54-3"><a href="for.-loop.-fun..html#cb54-3" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb54-4"><a href="for.-loop.-fun..html#cb54-4" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb54-5"><a href="for.-loop.-fun..html#cb54-5" tabindex="-1"></a><span class="co">#       if () {        # condition</span></span>
-<span id="cb54-6"><a href="for.-loop.-fun..html#cb54-6" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-7"><a href="for.-loop.-fun..html#cb54-7" tabindex="-1"></a><span class="co">#                      # if TRUE </span></span>
-<span id="cb54-8"><a href="for.-loop.-fun..html#cb54-8" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-9"><a href="for.-loop.-fun..html#cb54-9" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-10"><a href="for.-loop.-fun..html#cb54-10" tabindex="-1"></a><span class="co">#       ) else if () { # next condition</span></span>
-<span id="cb54-11"><a href="for.-loop.-fun..html#cb54-11" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-12"><a href="for.-loop.-fun..html#cb54-12" tabindex="-1"></a><span class="co">#                      # if TRUE for else if only</span></span>
-<span id="cb54-13"><a href="for.-loop.-fun..html#cb54-13" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-14"><a href="for.-loop.-fun..html#cb54-14" tabindex="-1"></a><span class="co">#       } else {  </span></span>
-<span id="cb54-15"><a href="for.-loop.-fun..html#cb54-15" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-16"><a href="for.-loop.-fun..html#cb54-16" tabindex="-1"></a><span class="co">#                      # if FALSE for all conditions </span></span>
-<span id="cb54-17"><a href="for.-loop.-fun..html#cb54-17" tabindex="-1"></a><span class="co">#         </span></span>
-<span id="cb54-18"><a href="for.-loop.-fun..html#cb54-18" tabindex="-1"></a><span class="co">#       } # end if statment</span></span>
-<span id="cb54-19"><a href="for.-loop.-fun..html#cb54-19" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb54-20"><a href="for.-loop.-fun..html#cb54-20" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb54-21"><a href="for.-loop.-fun..html#cb54-21" tabindex="-1"></a><span class="co"># } # close  for loop</span></span>
-<span id="cb54-22"><a href="for.-loop.-fun..html#cb54-22" tabindex="-1"></a></span>
-<span id="cb54-23"><a href="for.-loop.-fun..html#cb54-23" tabindex="-1"></a><span class="co"># View(iris) # look at the data!</span></span></code></pre></div>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="for.-loop.-fun..html#cb55-1" tabindex="-1"></a>?case_when</span>
-<span id="cb55-2"><a href="for.-loop.-fun..html#cb55-2" tabindex="-1"></a></span>
-<span id="cb55-3"><a href="for.-loop.-fun..html#cb55-3" tabindex="-1"></a>iris<span class="sc">$</span>Audrey_III.Length_NOloop <span class="ot">&lt;-</span> <span class="co"># use case_when to take it!</span></span>
-<span id="cb55-4"><a href="for.-loop.-fun..html#cb55-4" tabindex="-1"></a>  </span>
-<span id="cb55-5"><a href="for.-loop.-fun..html#cb55-5" tabindex="-1"></a></span>
-<span id="cb55-6"><a href="for.-loop.-fun..html#cb55-6" tabindex="-1"></a><span class="fu">View</span>(iris) <span class="co"># when you finish, compare your Audrey_III results</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="for.-loop.-fun..html#cb47-1" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb47-2"><a href="for.-loop.-fun..html#cb47-2" tabindex="-1"></a><span class="co"># for () { # open for loop</span></span>
+<span id="cb47-3"><a href="for.-loop.-fun..html#cb47-3" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb47-4"><a href="for.-loop.-fun..html#cb47-4" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb47-5"><a href="for.-loop.-fun..html#cb47-5" tabindex="-1"></a><span class="co">#       if () {        # condition</span></span>
+<span id="cb47-6"><a href="for.-loop.-fun..html#cb47-6" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-7"><a href="for.-loop.-fun..html#cb47-7" tabindex="-1"></a><span class="co">#                      # if TRUE </span></span>
+<span id="cb47-8"><a href="for.-loop.-fun..html#cb47-8" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-9"><a href="for.-loop.-fun..html#cb47-9" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-10"><a href="for.-loop.-fun..html#cb47-10" tabindex="-1"></a><span class="co">#       ) else if () { # next condition</span></span>
+<span id="cb47-11"><a href="for.-loop.-fun..html#cb47-11" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-12"><a href="for.-loop.-fun..html#cb47-12" tabindex="-1"></a><span class="co">#                      # if TRUE for else if only</span></span>
+<span id="cb47-13"><a href="for.-loop.-fun..html#cb47-13" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-14"><a href="for.-loop.-fun..html#cb47-14" tabindex="-1"></a><span class="co">#       } else {  </span></span>
+<span id="cb47-15"><a href="for.-loop.-fun..html#cb47-15" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-16"><a href="for.-loop.-fun..html#cb47-16" tabindex="-1"></a><span class="co">#                      # if FALSE for all conditions </span></span>
+<span id="cb47-17"><a href="for.-loop.-fun..html#cb47-17" tabindex="-1"></a><span class="co">#         </span></span>
+<span id="cb47-18"><a href="for.-loop.-fun..html#cb47-18" tabindex="-1"></a><span class="co">#       } # end if statment</span></span>
+<span id="cb47-19"><a href="for.-loop.-fun..html#cb47-19" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb47-20"><a href="for.-loop.-fun..html#cb47-20" tabindex="-1"></a><span class="co">#   </span></span>
+<span id="cb47-21"><a href="for.-loop.-fun..html#cb47-21" tabindex="-1"></a><span class="co"># } # close  for loop</span></span>
+<span id="cb47-22"><a href="for.-loop.-fun..html#cb47-22" tabindex="-1"></a></span>
+<span id="cb47-23"><a href="for.-loop.-fun..html#cb47-23" tabindex="-1"></a><span class="co"># View(iris) # look at the data!</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="for.-loop.-fun..html#cb48-1" tabindex="-1"></a>?case_when</span>
+<span id="cb48-2"><a href="for.-loop.-fun..html#cb48-2" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="for.-loop.-fun..html#cb48-3" tabindex="-1"></a>iris<span class="sc">$</span>Audrey_III.Length_NOloop <span class="ot">&lt;-</span> <span class="co"># use case_when to take it!</span></span>
+<span id="cb48-4"><a href="for.-loop.-fun..html#cb48-4" tabindex="-1"></a>  </span>
+<span id="cb48-5"><a href="for.-loop.-fun..html#cb48-5" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="for.-loop.-fun..html#cb48-6" tabindex="-1"></a><span class="fu">View</span>(iris) <span class="co"># when you finish, compare your Audrey_III results</span></span></code></pre></div>
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div class="csl-entry">

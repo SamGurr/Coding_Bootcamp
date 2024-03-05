@@ -25,13 +25,3 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
-for.-loop.-fun.
-using-a-mock-dataset-toothgrowth-
-mock-data-in-baser-
-before-getting-started..-
-add-base-commands-to-your-tool-belt
-loops-what-are-they-good-for-..-absolutely-somethin-
-exercise
-example-1-custom-column-next-time-floss-the-pigs-
-example-2-plot-loop-flower-power-
-activity-for-if-else-case_when-oh-my
