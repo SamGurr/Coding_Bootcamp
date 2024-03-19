@@ -1,4 +1,4 @@
---- 
+---
 title: "Coding Bootcamp for the starting biologist or cognitive scientist"
 author: "Samuel Gurr, PhD and Jason Griffin, PhD"
 date: "`r Sys.Date()`"
@@ -21,20 +21,37 @@ github-repo: rstudio/bookdown-demo
 
 ### The ecosystem
 
-With `R` and `RStudio` now installed on your computer, lets open `Rstudio`. It may be overwhelming at first, but this Integrated Development Environment (IDE) will provide a useful and practical interface between you and your code. Lets explore the basics of this interface. 
+With `R` and `RStudio` now installed on your computer, lets open `Rstudio`. It may be overwhelming at first, but this Integrated Development Environment (IDE) will provide a useful and practical interface between you and your code. Lets explore the basics of this interface.
 
-**1. Script Window**
+**1. Console:** This is where code and its corresponding output is executed and displayed. This is similar to short-term memory; If you write code here and execute it, it executes, but is not saved
 
-**2. Console**
+**2. Script Window:** This is where code can be written and executed in an imperative (sequentially) way. Content in here is usually a `.R` file. Think of this as long-term memory, where code is stored and can be reused.
 
-**3. Environment**
+**3. Environment:** This is sometimes know as your workspace. This is where things (variables, functions) are stored in memory.
 
-**4. Directory**
+**4. Directory** This shows the files and file structure of your computer. This is akin to Finder (macOS) or File Explorer (Windows).
 
+To demonstrate these major components in action, consider the following example:
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+Lets say that we want to simply read in a file saved on our computer.
 
-## Usage 
+1.  Open R Studio
+2.  Navigate in the Directory window to the file you want to import: `sample.csv`
+3.  Type in the Console to execute the following code to read in the file: `read.csv("sample.csv)`. Here we see that the code executed and displayed in the console window, but it does exist in the Environment nor is it saved in the script window. Again this is just short-term memory, but usually we want to work with things in a more long-term memory fashion.
+
+For example, instead of reading in the file from the Console, instead we may want to read in the file from the script window. This will require us to open a `.R` file: `New File > R Script`. Now we can type our code in the script window and execute it from there. To run code from this window, we use `Cmd+Enter`(macOS) as opposed to just `Enter` in the Console window. When we run this code now, we still see that the code and associated output is displayed in the console, but now our line of code `read_csv("sample.csv)` persists across a single execution of the code. It is saved in the scripting window and we can modify or re-execute the code as much as we want. For example, maybe instead of reading in `sample.csv`, we want to read in `"sample_data.csv"`, we can change this part of the code and re-execute. In this regard, the scripting window, often at the beginning, is a good "scratch space" when starting to code a new project or pipeline.
+
+Our data set still is not saved in memory. That is, it is not saved in our work space or environment. Again like short-term memory, the code was executed, the data was read in and displayed, but it was never saved in long-term memory. To do this, we must assign the code output as a variable using the assignment operator in R `<-`.
+
+Lets modify our code to reflect this: `data_frame <- read.csv("sample.csv")`. Now we have saved what was displayed in the console as an object called `data_frame` and we can see visually that it is stored in our Environment. Now it is stored in long-term memory.
+
+Since it is stored in long-term memory, that means we can start to interact with the object. For example, we may want to know what it it. To do this, we can call descriptive commands
+
+-   `str()` returns the structure of
+
+This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+
+## Usage
 
 Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
 
@@ -46,9 +63,9 @@ The `index.Rmd` file is required, and is also your first book chapter. It will b
 
 You can render the HTML version of this example book without changing anything:
 
-1. Find the **Build** pane in the RStudio IDE, and
+1.  Find the **Build** pane in the RStudio IDE, and
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+2.  Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
 
 Or build the book from the R console:
 
@@ -65,7 +82,6 @@ As you work, you may start a local server to live preview this HTML book. This p
 ```{r eval=FALSE}
 bookdown::serve_book()
 ```
-
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
